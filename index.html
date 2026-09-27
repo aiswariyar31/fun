@@ -1,0 +1,2962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Functions - Complete Discrete Mathematics study notes for BCA students"
+    >
+
+    <title>Functions | BCA Discrete Mathematics Study Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     READING PROGRESS
+========================= -->
+<div class="reading-progress">
+    <div id="readingProgress"></div>
+</div>
+
+
+<!-- =========================
+     HEADER / NAVIGATION
+========================= -->
+<header class="site-header">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-mark">ƒ</span>
+            <span>
+                <strong>Discrete<span>Math</span></strong>
+                <small>Functions Study Portal</small>
+            </span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="#basics">Basics</a>
+            <a href="#domain-range">Domain & Range</a>
+            <a href="#types">Types</a>
+            <a href="#composition">Composition</a>
+            <a href="#inverse">Inverse</a>
+            <a href="#cs-functions">CS Functions</a>
+            <a href="#floor-ceiling">Floor/Ceiling</a>
+            <a href="#flashcards">Flashcards</a>
+            <a href="#doubts">Doubts</a>
+            <a href="#revision">Revision</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+                class="icon-btn"
+                id="themeToggle"
+                title="Toggle dark mode"
+                aria-label="Toggle dark mode"
+            >
+                ◐
+            </button>
+
+            <button
+                class="icon-btn"
+                id="printBtn"
+                title="Print notes"
+                aria-label="Print notes"
+            >
+                🖨
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="home">
+
+    <div class="hero-decoration decoration-one"></div>
+    <div class="hero-decoration decoration-two"></div>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                BCA • DISCRETE MATHEMATICS
+            </div>
+
+            <h1>
+                Functions
+                <span>From Basics to Exam Mastery</span>
+            </h1>
+
+            <p class="hero-text">
+                A complete student-friendly study portal covering functions,
+                domain and range, composition, injective, surjective,
+                bijective and inverse functions, together with important
+                functions used in Computer Science.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#basics" class="btn btn-primary">
+                    Start Learning →
+                </a>
+
+                <a href="#flashcards" class="btn btn-outline">
+                    Practice Flashcards
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>14+</strong>
+                    <span>Major Topics</span>
+                </div>
+
+                <div>
+                    <strong>20+</strong>
+                    <span>Examples</span>
+                </div>
+
+                <div>
+                    <strong>10+</strong>
+                    <span>Interactive Tools</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO FUNCTION DIAGRAM -->
+        <div class="hero-visual">
+
+            <div class="function-card">
+
+                <div class="function-card-top">
+                    <span>Function Mapping</span>
+                    <span class="live-dot"></span>
+                </div>
+
+                <div class="mapping-visual">
+
+                    <div class="mapping-set">
+                        <h4>A</h4>
+
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+
+                    <div class="mapping-arrows">
+                        <span>→</span>
+                        <span>→</span>
+                        <span>→</span>
+                    </div>
+
+                    <div class="mapping-set">
+                        <h4>B</h4>
+
+                        <span>a</span>
+                        <span>b</span>
+                        <span>c</span>
+                    </div>
+
+                </div>
+
+                <div class="formula-small">
+                    f : A → B
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUICK NAVIGATION
+========================= -->
+<section class="quick-section">
+
+    <div class="container">
+
+        <div class="quick-grid">
+
+            <a href="#basics" class="quick-card">
+                <span class="quick-icon">ƒ</span>
+                <strong>Function Basics</strong>
+                <small>Definition & representation</small>
+            </a>
+
+            <a href="#domain-range" class="quick-card">
+                <span class="quick-icon">↔</span>
+                <strong>Domain & Range</strong>
+                <small>Understand the difference</small>
+            </a>
+
+            <a href="#types" class="quick-card">
+                <span class="quick-icon">◎</span>
+                <strong>Types</strong>
+                <small>Injective, onto & bijective</small>
+            </a>
+
+            <a href="#composition" class="quick-card">
+                <span class="quick-icon">∘</span>
+                <strong>Composition</strong>
+                <small>f ∘ g and g ∘ f</small>
+            </a>
+
+            <a href="#inverse" class="quick-card">
+                <span class="quick-icon">↩</span>
+                <strong>Inverse</strong>
+                <small>Find and verify inverse</small>
+            </a>
+
+            <a href="#cs-functions" class="quick-card">
+                <span class="quick-icon">2ⁿ</span>
+                <strong>CS Functions</strong>
+                <small>Exponential & logarithmic</small>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+<main>
+
+
+<!-- ==========================================================
+     SECTION 1 : BASIC CONCEPTS
+========================================================== -->
+<section class="section" id="basics">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">01 • FUNDAMENTALS</span>
+
+            <h2>Functions — Basic Concepts</h2>
+
+            <p>
+                Before studying different types of functions, it is important
+                to understand what a function actually means and how it is
+                represented mathematically.
+            </p>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="card large-card">
+
+                <h3>What is a Function?</h3>
+
+                <p>
+                    A <strong>function</strong> is a special type of relation
+                    between two sets in which every element of the first set,
+                    called the <strong>domain</strong>, is associated with
+                    exactly one element of the second set, called the
+                    <strong>codomain</strong>.
+                </p>
+
+                <p>
+                    If A and B are two sets, a function from A to B is written
+                    as <strong>f : A → B</strong>. This notation means that
+                    function f maps every element of A to one and only one
+                    element of B.
+                </p>
+
+                <div class="formula">
+                    f : A → B
+                </div>
+
+                <p>
+                    The important phrase to remember is
+                    <strong>“every input has exactly one output.”</strong>
+                    Several different inputs may produce the same output,
+                    but one input cannot produce two different outputs.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Function as a Relation</h3>
+
+                <p>
+                    A relation is a collection of ordered pairs. A function
+                    is a relation with an additional restriction: no input
+                    value can be paired with two different output values.
+                </p>
+
+                <div class="example-box">
+
+                    <strong>Function:</strong>
+
+                    <p>
+                        {(1, a), (2, b), (3, c)}
+                    </p>
+
+                    <strong>Not a function:</strong>
+
+                    <p>
+                        {(1, a), (1, b), (2, c)}
+                    </p>
+
+                    <p class="muted">
+                        Here input 1 has two outputs: a and b.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- REPRESENTATION -->
+        <div class="card full-card">
+
+            <h3>Ways to Represent a Function</h3>
+
+            <p>
+                A function can be represented in several ways. Understanding
+                these representations helps students move between mathematical
+                notation, diagrams, tables and graphs.
+            </p>
+
+            <div class="representation-grid">
+
+                <div class="representation-card">
+                    <span>01</span>
+                    <h4>Mapping Diagram</h4>
+                    <p>
+                        Elements of the domain are connected to their
+                        corresponding elements in the codomain using arrows.
+                    </p>
+                </div>
+
+                <div class="representation-card">
+                    <span>02</span>
+                    <h4>Ordered Pairs</h4>
+                    <p>
+                        A function can be represented as a set of ordered pairs,
+                        such as {(1,2), (2,4), (3,6)}.
+                    </p>
+                </div>
+
+                <div class="representation-card">
+                    <span>03</span>
+                    <h4>Formula</h4>
+                    <p>
+                        A rule can define a function, such as
+                        f(x) = 2x + 1.
+                    </p>
+                </div>
+
+                <div class="representation-card">
+                    <span>04</span>
+                    <h4>Table</h4>
+                    <p>
+                        Input and output values can be arranged in a table.
+                    </p>
+                </div>
+
+                <div class="representation-card">
+                    <span>05</span>
+                    <h4>Graph</h4>
+                    <p>
+                        A function can be plotted on a coordinate plane to
+                        visualize the relationship between input and output.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FUNCTION RULE -->
+        <div class="exam-box">
+
+            <div class="exam-icon">✎</div>
+
+            <div>
+
+                <h3>14-Mark Exam Point</h3>
+
+                <p>
+                    When asked “Define a function and explain its
+                    representation”, begin with the formal definition,
+                    explain domain and codomain, write f : A → B, give an
+                    example using ordered pairs or a mapping diagram, and
+                    clearly state the rule:
+                    <strong>each domain element must have exactly one image.</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEMBERSHIP QUIZ -->
+        <div class="interactive-panel">
+
+            <div class="interactive-heading">
+
+                <div>
+                    <span class="eyebrow">INTERACTIVE</span>
+                    <h3>Is This a Function?</h3>
+                </div>
+
+                <span class="tool-badge">Quick Test</span>
+
+            </div>
+
+            <p>
+                Look at the ordered pairs and decide whether the relation is
+                a function.
+            </p>
+
+            <div class="quiz-question" id="functionQuizQuestion">
+                {(1,a), (2,b), (3,c)}
+            </div>
+
+            <div class="quiz-buttons">
+
+                <button class="quiz-btn function-answer" data-answer="yes">
+                    ✓ Function
+                </button>
+
+                <button class="quiz-btn function-answer" data-answer="no">
+                    ✕ Not a Function
+                </button>
+
+            </div>
+
+            <div id="functionQuizFeedback" class="feedback"></div>
+
+            <button class="btn btn-secondary" id="newFunctionQuestion">
+                New Question
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 2 : DOMAIN, CODOMAIN & RANGE
+========================================================== -->
+<section class="section section-alt" id="domain-range">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">02 • CORE CONCEPT</span>
+
+            <h2>Domain, Codomain and Range</h2>
+
+            <p>
+                These three terms describe different parts of a function.
+                Students often confuse codomain with range, so they should be
+                studied separately.
+            </p>
+
+        </div>
+
+
+        <div class="three-column">
+
+            <article class="card concept-card">
+
+                <div class="number-circle">D</div>
+
+                <h3>Domain</h3>
+
+                <p>
+                    The <strong>domain</strong> is the set of all possible
+                    input values for a function. In a function
+                    f : A → B, the set A is the domain.
+                </p>
+
+                <div class="formula">
+                    Domain = Set of inputs
+                </div>
+
+                <p>
+                    For example, if
+                    f(x) = x² and the allowed inputs are
+                    {-2,-1,0,1,2}, then these five values form the domain.
+                </p>
+
+            </article>
+
+
+            <article class="card concept-card">
+
+                <div class="number-circle">C</div>
+
+                <h3>Codomain</h3>
+
+                <p>
+                    The <strong>codomain</strong> is the set that contains all
+                    possible target values specified when the function is
+                    defined.
+                </p>
+
+                <div class="formula">
+                    f : A → B
+                    <br>
+                    B = Codomain
+                </div>
+
+                <p>
+                    The codomain may contain values that are never actually
+                    produced by the function.
+                </p>
+
+            </article>
+
+
+            <article class="card concept-card">
+
+                <div class="number-circle">R</div>
+
+                <h3>Range</h3>
+
+                <p>
+                    The <strong>range</strong> is the set of output values that
+                    are actually obtained from the domain.
+                </p>
+
+                <div class="formula">
+                    Range ⊆ Codomain
+                </div>
+
+                <p>
+                    Therefore, every range value belongs to the codomain,
+                    but every codomain value need not necessarily belong to
+                    the range.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="comparison-table">
+
+            <h3>Domain vs Codomain vs Range</h3>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Concept</th>
+                            <th>Meaning</th>
+                            <th>Question to Ask</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td><strong>Domain</strong></td>
+                            <td>Set of input values</td>
+                            <td>What can I put into the function?</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Codomain</strong></td>
+                            <td>Specified target set</td>
+                            <td>Where can outputs belong?</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Range</strong></td>
+                            <td>Actual output values</td>
+                            <td>What outputs are actually produced?</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- DOMAIN RANGE EXPLORER -->
+        <div class="interactive-panel">
+
+            <div class="interactive-heading">
+
+                <div>
+                    <span class="eyebrow">INTERACTIVE TOOL</span>
+                    <h3>Domain & Range Explorer</h3>
+                </div>
+
+                <span class="tool-badge">Practice</span>
+
+            </div>
+
+            <p>
+                Enter domain values and a simple rule such as
+                <strong>x²</strong>, <strong>2x+1</strong>, or
+                <strong>x+5</strong>.
+            </p>
+
+            <div class="input-grid">
+
+                <label>
+                    Domain values
+                    <input
+                        type="text"
+                        id="domainInput"
+                        value="-2,-1,0,1,2"
+                        placeholder="Example: -2,-1,0,1,2"
+                    >
+                </label>
+
+                <label>
+                    Function
+                    <select id="domainFunction">
+                        <option value="square">f(x) = x²</option>
+                        <option value="linear">f(x) = 2x + 1</option>
+                        <option value="cube">f(x) = x³</option>
+                        <option value="double">f(x) = 2x</option>
+                        <option value="plus5">f(x) = x + 5</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <button class="btn btn-primary" id="calculateDomainRange">
+                Calculate Range
+            </button>
+
+            <div id="domainRangeResult" class="result-box"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 3 : TYPES OF FUNCTIONS
+========================================================== -->
+<section class="section" id="types">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">03 • CLASSIFICATION</span>
+
+            <h2>Types of Functions</h2>
+
+            <p>
+                Functions can be classified according to how elements of the
+                domain are mapped to elements of the codomain.
+            </p>
+
+        </div>
+
+
+        <div class="type-grid">
+
+            <article class="type-card">
+
+                <div class="type-number">01</div>
+
+                <h3>Injective</h3>
+
+                <p>
+                    A function is injective or one-to-one if distinct elements
+                    of the domain always have distinct images.
+                </p>
+
+                <div class="formula">
+                    f(a) = f(b) ⇒ a = b
+                </div>
+
+                <span class="type-label">One-to-One</span>
+
+            </article>
+
+
+            <article class="type-card">
+
+                <div class="type-number">02</div>
+
+                <h3>Surjective</h3>
+
+                <p>
+                    A function is surjective or onto when every element of the
+                    codomain is the image of at least one domain element.
+                </p>
+
+                <div class="formula">
+                    Range = Codomain
+                </div>
+
+                <span class="type-label">Onto</span>
+
+            </article>
+
+
+            <article class="type-card">
+
+                <div class="type-number">03</div>
+
+                <h3>Bijective</h3>
+
+                <p>
+                    A bijective function is both injective and surjective.
+                    Every codomain element has exactly one pre-image.
+                </p>
+
+                <div class="formula">
+                    Bijective = Injective + Surjective
+                </div>
+
+                <span class="type-label">One-to-One & Onto</span>
+
+            </article>
+
+
+            <article class="type-card">
+
+                <div class="type-number">04</div>
+
+                <h3>Many-to-One</h3>
+
+                <p>
+                    A many-to-one function allows two or more different domain
+                    elements to have the same image.
+                </p>
+
+                <div class="formula">
+                    a ≠ b but f(a) = f(b)
+                </div>
+
+                <span class="type-label">Allowed</span>
+
+            </article>
+
+
+            <article class="type-card">
+
+                <div class="type-number">05</div>
+
+                <h3>Into</h3>
+
+                <p>
+                    An into function does not cover the entire codomain.
+                    Therefore at least one codomain element is not an image.
+                </p>
+
+                <div class="formula">
+                    Range ⊂ Codomain
+                </div>
+
+                <span class="type-label">Not Onto</span>
+
+            </article>
+
+
+            <article class="type-card">
+
+                <div class="type-number">06</div>
+
+                <h3>Identity Function</h3>
+
+                <p>
+                    An identity function maps every element to itself.
+                </p>
+
+                <div class="formula">
+                    f(x) = x
+                </div>
+
+                <span class="type-label">Special Function</span>
+
+            </article>
+
+        </div>
+
+
+        <!-- FUNCTION CLASSIFICATION -->
+        <div class="card full-card">
+
+            <h3>How to Identify Function Type</h3>
+
+            <div class="classification-flow">
+
+                <div class="flow-step">
+                    <span>1</span>
+                    <strong>Check Inputs</strong>
+                    <p>
+                        Every domain element must have exactly one output.
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <span>2</span>
+                    <strong>Check Repeated Outputs</strong>
+                    <p>
+                        If two different inputs share an output, it is not
+                        injective.
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <span>3</span>
+                    <strong>Check Codomain</strong>
+                    <p>
+                        If every codomain element is reached, it is surjective.
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <span>4</span>
+                    <strong>Combine</strong>
+                    <p>
+                        If both conditions hold, the function is bijective.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLASSIFICATION SIMULATOR -->
+        <div class="interactive-panel">
+
+            <div class="interactive-heading">
+
+                <div>
+                    <span class="eyebrow">INTERACTIVE SIMULATOR</span>
+                    <h3>Function Classification</h3>
+                </div>
+
+                <span class="tool-badge">Try It</span>
+
+            </div>
+
+            <p>
+                Enter a mapping using output values. For example, for domain
+                {1,2,3}, enter <strong>a,b,c</strong>.
+            </p>
+
+            <div class="input-grid">
+
+                <label>
+                    Domain
+                    <input
+                        type="text"
+                        id="classDomain"
+                        value="1,2,3"
+                    >
+                </label>
+
+                <label>
+                    Codomain
+                    <input
+                        type="text"
+                        id="classCodomain"
+                        value="a,b,c"
+                    >
+                </label>
+
+                <label>
+                    Outputs in order
+                    <input
+                        type="text"
+                        id="classOutputs"
+                        value="a,b,c"
+                    >
+                </label>
+
+            </div>
+
+            <button class="btn btn-primary" id="classifyFunction">
+                Classify Function
+            </button>
+
+            <div id="classificationResult" class="result-box"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 4 : INJECTIVE
+========================================================== -->
+<section class="section section-alt">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">04 • ONE-TO-ONE</span>
+
+            <h2>Injective Functions</h2>
+
+            <p>
+                An injective function is also called a one-to-one function.
+                It never assigns the same output to two different inputs.
+            </p>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="card large-card">
+
+                <h3>Definition</h3>
+
+                <p>
+                    Let f : A → B be a function. The function f is called
+                    <strong>injective</strong> if whenever two domain elements
+                    have the same image, those domain elements must actually
+                    be equal.
+                </p>
+
+                <div class="formula">
+                    f(a) = f(b) ⇒ a = b
+                </div>
+
+                <p>
+                    Equivalently, if a and b are different elements of the
+                    domain, then their outputs must also be different.
+                </p>
+
+                <div class="formula">
+                    a ≠ b ⇒ f(a) ≠ f(b)
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Example</h3>
+
+                <p>
+                    Consider:
+                </p>
+
+                <div class="formula">
+                    f(x) = 2x + 1
+                </div>
+
+                <p>
+                    If f(a) = f(b), then:
+                </p>
+
+                <div class="formula">
+                    2a + 1 = 2b + 1
+                    <br>
+                    2a = 2b
+                    <br>
+                    a = b
+                </div>
+
+                <p>
+                    Therefore, f(x) = 2x + 1 is injective.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="tip-box">
+
+            <strong>Memory Trick:</strong>
+
+            <span>
+                Injective → “No two inputs share an output.”
+            </span>
+
+        </div>
+
+
+        <div class="exam-box">
+
+            <div class="exam-icon">★</div>
+
+            <div>
+
+                <h3>Exam Answer Structure</h3>
+
+                <p>
+                    For an injective-function question, write the definition,
+                    mathematical condition, explain that distinct inputs have
+                    distinct outputs, provide a mapping or algebraic example,
+                    and conclude clearly that the function is one-to-one.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 5 : SURJECTIVE
+========================================================== -->
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">05 • ONTO</span>
+
+            <h2>Surjective Functions</h2>
+
+            <p>
+                A surjective function is commonly called an onto function.
+                It reaches every element of its codomain.
+            </p>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="card large-card">
+
+                <h3>Definition</h3>
+
+                <p>
+                    A function f : A → B is called
+                    <strong>surjective</strong> if every element of B has at
+                    least one pre-image in A. In other words, every element
+                    of the codomain must be reached by the function.
+                </p>
+
+                <div class="formula">
+                    Range = Codomain
+                </div>
+
+                <p>
+                    A surjective function does not require every output to
+                    have only one input. Therefore, a surjective function may
+                    be many-to-one.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Example</h3>
+
+                <p>
+                    Let:
+                </p>
+
+                <div class="formula">
+                    A = {1,2,3}
+                    <br>
+                    B = {a,b}
+                </div>
+
+                <p>
+                    Suppose:
+                </p>
+
+                <div class="formula">
+                    1 → a
+                    <br>
+                    2 → b
+                    <br>
+                    3 → a
+                </div>
+
+                <p>
+                    Both a and b are reached. Therefore the function is
+                    surjective, even though it is not injective.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="comparison-highlight">
+
+            <div>
+                <strong>Injective</strong>
+                <span>Focus on repeated outputs.</span>
+            </div>
+
+            <div>
+                <strong>Surjective</strong>
+                <span>Focus on uncovered codomain elements.</span>
+            </div>
+
+            <div>
+                <strong>Bijective</strong>
+                <span>Both conditions must hold.</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 6 : BIJECTIVE
+========================================================== -->
+<section class="section section-alt">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">06 • PERFECT MATCH</span>
+
+            <h2>Bijective Functions</h2>
+
+            <p>
+                A bijective function combines the properties of injective and
+                surjective functions.
+            </p>
+
+        </div>
+
+
+        <div class="bijective-banner">
+
+            <div class="big-formula">
+                Bijective = Injective + Surjective
+            </div>
+
+            <p>
+                Every element of the codomain has exactly one pre-image.
+            </p>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="card">
+
+                <h3>Why Bijective Functions Matter</h3>
+
+                <p>
+                    Bijective functions create a perfect one-to-one
+                    correspondence between two sets. No domain element is
+                    left unmapped, and no codomain element is left unused.
+                </p>
+
+                <p>
+                    This property is particularly important because a
+                    function has an inverse function precisely when the
+                    mapping is reversible in this sense.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Finite Set Shortcut</h3>
+
+                <p>
+                    When domain and codomain are finite sets with the same
+                    number of elements, injectivity and surjectivity become
+                    equivalent conditions.
+                </p>
+
+                <div class="formula">
+                    |A| = |B|
+                    <br>
+                    Injective ⇔ Surjective
+                </div>
+
+                <p>
+                    Therefore, in this special case, proving either one is
+                    enough to establish bijectivity.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 7 : COMPOSITION
+========================================================== -->
+<section class="section" id="composition">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">07 • FUNCTION OPERATIONS</span>
+
+            <h2>Composition of Functions</h2>
+
+            <p>
+                Composition means applying one function after another.
+                It is one of the most important operations involving functions.
+            </p>
+
+        </div>
+
+
+        <div class="card large-card">
+
+            <h3>Meaning of Composition</h3>
+
+            <p>
+                Suppose we have two functions:
+                <strong>g : A → B</strong> and
+                <strong>f : B → C</strong>.
+                The output of g becomes the input of f. The resulting
+                function is called the composition of f and g.
+            </p>
+
+            <div class="formula formula-large">
+                (f ∘ g)(x) = f(g(x))
+            </div>
+
+            <p>
+                The symbol ∘ is read as “composition”. It is important to
+                remember that the function on the right is applied first.
+            </p>
+
+            <div class="step-flow">
+
+                <div class="step">
+                    <span>1</span>
+                    <strong>Input x</strong>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <span>2</span>
+                    <strong>Apply g</strong>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <span>3</span>
+                    <strong>Apply f</strong>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <span>4</span>
+                    <strong>Final Output</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="example-box large-example">
+
+            <h3>Worked Example</h3>
+
+            <p>Let:</p>
+
+            <div class="formula">
+                f(x) = 2x + 1
+                <br>
+                g(x) = x²
+            </div>
+
+            <h4>Find (f ∘ g)(x)</h4>
+
+            <p>
+                First apply g:
+            </p>
+
+            <div class="formula">
+                g(x) = x²
+            </div>
+
+            <p>
+                Now put g(x) into f:
+            </p>
+
+            <div class="formula">
+                f(g(x))
+                <br>
+                = f(x²)
+                <br>
+                = 2x² + 1
+            </div>
+
+            <p class="success-text">
+                Therefore:
+                <strong>(f ∘ g)(x) = 2x² + 1</strong>
+            </p>
+
+            <h4>Now find (g ∘ f)(x)</h4>
+
+            <div class="formula">
+                g(f(x))
+                <br>
+                = g(2x + 1)
+                <br>
+                = (2x + 1)²
+            </div>
+
+            <p class="warning-text">
+                Therefore, generally:
+                <strong>f ∘ g ≠ g ∘ f</strong>
+            </p>
+
+        </div>
+
+
+        <!-- COMPOSITION CALCULATOR -->
+        <div class="interactive-panel">
+
+            <div class="interactive-heading">
+
+                <div>
+                    <span class="eyebrow">INTERACTIVE CALCULATOR</span>
+                    <h3>Composition Calculator</h3>
+                </div>
+
+                <span class="tool-badge">Step-by-Step</span>
+
+            </div>
+
+            <p>
+                Try the predefined functions below. The calculator evaluates
+                both orders of composition.
+            </p>
+
+            <div class="input-grid">
+
+                <label>
+                    Function f
+                    <select id="compositionF">
+                        <option value="2x+1">f(x) = 2x + 1</option>
+                        <option value="3x-2">f(x) = 3x - 2</option>
+                        <option value="x+5">f(x) = x + 5</option>
+                    </select>
+                </label>
+
+                <label>
+                    Function g
+                    <select id="compositionG">
+                        <option value="x2">g(x) = x²</option>
+                        <option value="x+2">g(x) = x + 2</option>
+                        <option value="2x">g(x) = 2x</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <button class="btn btn-primary" id="calculateComposition">
+                Calculate Composition
+            </button>
+
+            <div id="compositionResult" class="result-box"></div>
+
+        </div>
+
+
+        <div class="mistake-box">
+
+            <h3>⚠ Common Mistake</h3>
+
+            <p>
+                Students often read
+                <strong>f ∘ g</strong> from left to right and apply f first.
+                This is incorrect.
+            </p>
+
+            <div class="formula">
+                (f ∘ g)(x) = f(g(x))
+                <br>
+                g is applied first.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 8 : INVERSE
+========================================================== -->
+<section class="section section-alt" id="inverse">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">08 • REVERSING A FUNCTION</span>
+
+            <h2>Inverse of a Function</h2>
+
+            <p>
+                An inverse function reverses the action of the original
+                function. It takes an output and returns the corresponding
+                original input.
+            </p>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="card large-card">
+
+                <h3>Meaning of Inverse</h3>
+
+                <p>
+                    If a function maps an input x to an output y, then its
+                    inverse maps y back to x. The inverse of f is written as
+                    <strong>f⁻¹</strong>.
+                </p>
+
+                <div class="formula formula-large">
+                    f(x) = y
+                    <br>
+                    f⁻¹(y) = x
+                </div>
+
+                <p>
+                    For a function to have an inverse function, the mapping
+                    must be reversible. In the usual function setting,
+                    bijectivity provides exactly this one-to-one correspondence.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Important Warning</h3>
+
+                <div class="warning-panel">
+
+                    <strong>f⁻¹(x) is NOT 1/f(x)</strong>
+
+                    <p>
+                        The notation f⁻¹(x) represents the inverse function,
+                        whereas 1/f(x) represents the reciprocal.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="card full-card">
+
+            <h3>Steps to Find an Inverse Function</h3>
+
+            <div class="inverse-steps">
+
+                <div>
+                    <span>1</span>
+                    <p>Write y = f(x).</p>
+                </div>
+
+                <div>
+                    <span>2</span>
+                    <p>Interchange x and y.</p>
+                </div>
+
+                <div>
+                    <span>3</span>
+                    <p>Solve the equation for y.</p>
+                </div>
+
+                <div>
+                    <span>4</span>
+                    <p>Replace y by f⁻¹(x).</p>
+                </div>
+
+                <div>
+                    <span>5</span>
+                    <p>Verify if necessary.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="example-box large-example">
+
+            <h3>Worked Example: Finding an Inverse</h3>
+
+            <p>Given:</p>
+
+            <div class="formula">
+                f(x) = 2x + 3
+            </div>
+
+            <p><strong>Step 1:</strong> Write y = f(x).</p>
+
+            <div class="formula">
+                y = 2x + 3
+            </div>
+
+            <p><strong>Step 2:</strong> Interchange x and y.</p>
+
+            <div class="formula">
+                x = 2y + 3
+            </div>
+
+            <p><strong>Step 3:</strong> Solve for y.</p>
+
+            <div class="formula">
+                x - 3 = 2y
+                <br>
+                y = (x - 3) / 2
+            </div>
+
+            <p><strong>Step 4:</strong></p>
+
+            <div class="formula">
+                f⁻¹(x) = (x - 3) / 2
+            </div>
+
+            <p class="success-text">
+                Therefore the inverse function is
+                <strong>f⁻¹(x) = (x − 3)/2</strong>.
+            </p>
+
+        </div>
+
+
+        <!-- INVERSE CALCULATOR -->
+        <div class="interactive-panel">
+
+            <div class="interactive-heading">
+
+                <div>
+                    <span class="eyebrow">INTERACTIVE TOOL</span>
+                    <h3>Linear Inverse Calculator</h3>
+                </div>
+
+                <span class="tool-badge">Practice</span>
+
+            </div>
+
+            <p>
+                Enter a linear function of the form
+                <strong>f(x) = ax + b</strong>.
+            </p>
+
+            <div class="linear-inputs">
+
+                <label>
+                    a
+                    <input type="number" id="inverseA" value="2">
+                </label>
+
+                <span class="operator-text">x +</span>
+
+                <label>
+                    b
+                    <input type="number" id="inverseB" value="3">
+                </label>
+
+            </div>
+
+            <button class="btn btn-primary" id="calculateInverse">
+                Find Inverse
+            </button>
+
+            <div id="inverseResult" class="result-box"></div>
+
+        </div>
+
+
+        <div class="verification-box">
+
+            <h3>Verification of an Inverse</h3>
+
+            <p>
+                A useful way to verify an inverse is to compose the function
+                with its inverse.
+            </p>
+
+            <div class="formula">
+                f(f⁻¹(x)) = x
+                <br>
+                f⁻¹(f(x)) = x
+            </div>
+
+            <p>
+                If both identities hold on their appropriate domains, the
+                functions correctly undo each other.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 9 : USEFUL CS FUNCTIONS
+========================================================== -->
+<section class="section" id="cs-functions">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">09 • COMPUTER SCIENCE</span>
+
+            <h2>Useful Functions for Computer Science</h2>
+
+            <p>
+                Functions are not only mathematical objects. They are widely
+                used in algorithms, data structures, programming, complexity
+                analysis, computer graphics and information processing.
+            </p>
+
+        </div>
+
+
+        <!-- EXPONENTIAL -->
+        <div class="cs-function-block">
+
+            <div class="cs-function-header">
+
+                <span class="cs-number">01</span>
+
+                <div>
+                    <h3>Exponential Functions</h3>
+                    <span>Growth and repeated multiplication</span>
+                </div>
+
+            </div>
+
+            <div class="content-grid">
+
+                <article class="card">
+
+                    <p>
+                        An exponential function is generally written as
+                        <strong>f(x) = aˣ</strong>, where a is positive and
+                        a ≠ 1. The variable appears in the exponent, which
+                        makes exponential functions fundamentally different
+                        from polynomial functions.
+                    </p>
+
+                    <div class="formula">
+                        f(x) = aˣ
+                    </div>
+
+                    <p>
+                        When a > 1, the function represents exponential growth.
+                        When 0 < a < 1, it represents exponential decay.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h4>Computer Science Connection</h4>
+
+                    <p>
+                        Powers of 2 occur frequently in computing because
+                        digital systems use binary representation.
+                    </p>
+
+                    <div class="formula">
+                        2⁰ = 1
+                        <br>
+                        2¹ = 2
+                        <br>
+                        2² = 4
+                        <br>
+                        2³ = 8
+                        <br>
+                        2¹⁰ = 1024
+                    </div>
+
+                    <p>
+                        Exponential expressions also appear when describing
+                        brute-force search spaces and combinations.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOG -->
+        <div class="cs-function-block">
+
+            <div class="cs-function-header">
+
+                <span class="cs-number">02</span>
+
+                <div>
+                    <h3>Logarithmic Functions</h3>
+                    <span>The inverse of exponential growth</span>
+                </div>
+
+            </div>
+
+            <div class="content-grid">
+
+                <article class="card">
+
+                    <p>
+                        A logarithm tells us the exponent to which a base must
+                        be raised to obtain a particular number.
+                    </p>
+
+                    <div class="formula">
+                        log<sub>b</sub>(x) = y
+                        ⇔
+                        bʸ = x
+                    </div>
+
+                    <p>
+                        For example:
+                    </p>
+
+                    <div class="formula">
+                        log₂ 8 = 3
+                    </div>
+
+                    <p>
+                        because 2³ = 8.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h4>Why Logs Matter in Computer Science</h4>
+
+                    <p>
+                        Logarithmic functions are important in algorithm
+                        analysis. Binary search is a classic example: each
+                        step can reduce the search space approximately by half.
+                    </p>
+
+                    <div class="formula">
+                        Binary Search → O(log₂ n)
+                    </div>
+
+                    <p>
+                        Logarithms also appear in tree structures, data
+                        compression, information theory and divide-and-conquer
+                        algorithms.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- LOG LAWS -->
+            <div class="law-grid">
+
+                <div class="law-card">
+                    <strong>Product Rule</strong>
+                    <span>log(ab) = log a + log b</span>
+                </div>
+
+                <div class="law-card">
+                    <strong>Quotient Rule</strong>
+                    <span>log(a/b) = log a − log b</span>
+                </div>
+
+                <div class="law-card">
+                    <strong>Power Rule</strong>
+                    <span>log(aⁿ) = n log(a)</span>
+                </div>
+
+                <div class="law-card">
+                    <strong>Change of Base</strong>
+                    <span>log<sub>b</sub>a = log a / log b</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- POLYNOMIAL -->
+        <div class="cs-function-block">
+
+            <div class="cs-function-header">
+
+                <span class="cs-number">03</span>
+
+                <div>
+                    <h3>Polynomial Functions</h3>
+                    <span>Expressions involving non-negative integer powers</span>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <p>
+                    A polynomial function is a function of the form:
+                </p>
+
+                <div class="formula formula-large">
+                    f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀
+                </div>
+
+                <p>
+                    Here n is a non-negative integer and the coefficients
+                    are constants. The highest exponent with a non-zero
+                    coefficient is called the <strong>degree</strong> of the
+                    polynomial.
+                </p>
+
+                <div class="polynomial-types">
+
+                    <div>
+                        <strong>Constant</strong>
+                        <span>f(x) = 5</span>
+                    </div>
+
+                    <div>
+                        <strong>Linear</strong>
+                        <span>f(x) = 2x + 1</span>
+                    </div>
+
+                    <div>
+                        <strong>Quadratic</strong>
+                        <span>f(x) = x² + 3x + 2</span>
+                    </div>
+
+                    <div>
+                        <strong>Cubic</strong>
+                        <span>f(x) = x³ − x</span>
+                    </div>
+
+                </div>
+
+                <div class="cs-note">
+
+                    <strong>Computer Science:</strong>
+
+                    <p>
+                        Polynomial functions are frequently used when
+                        describing polynomial-time algorithms such as
+                        O(n), O(n²), O(n³), and related complexity classes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 10 : FLOOR & CEILING
+========================================================== -->
+<section class="section section-alt" id="floor-ceiling">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">10 • INTEGER FUNCTIONS</span>
+
+            <h2>Floor and Ceiling Functions</h2>
+
+            <p>
+                Floor and ceiling functions convert real numbers into integers
+                according to two different rounding rules.
+            </p>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="card">
+
+                <div class="symbol-heading">
+                    <span class="big-symbol">⌊x⌋</span>
+
+                    <div>
+                        <h3>Floor Function</h3>
+                        <span>Greatest integer function</span>
+                    </div>
+                </div>
+
+                <p>
+                    The floor of a real number x is the greatest integer that
+                    is less than or equal to x.
+                </p>
+
+                <div class="formula">
+                    ⌊x⌋ = greatest integer ≤ x
+                </div>
+
+                <div class="example-list">
+
+                    <p>⌊3.7⌋ = 3</p>
+                    <p>⌊5⌋ = 5</p>
+                    <p>⌊−2.3⌋ = −3</p>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="symbol-heading">
+                    <span class="big-symbol">⌈x⌉</span>
+
+                    <div>
+                        <h3>Ceiling Function</h3>
+                        <span>Smallest integer function</span>
+                    </div>
+                </div>
+
+                <p>
+                    The ceiling of a real number x is the smallest integer
+                    that is greater than or equal to x.
+                </p>
+
+                <div class="formula">
+                    ⌈x⌉ = smallest integer ≥ x
+                </div>
+
+                <div class="example-list">
+
+                    <p>⌈3.2⌉ = 4</p>
+                    <p>⌈5⌉ = 5</p>
+                    <p>⌈−2.3⌉ = −2</p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="comparison-table">
+
+            <h3>Floor vs Ceiling</h3>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>x</th>
+                            <th>Floor ⌊x⌋</th>
+                            <th>Ceiling ⌈x⌉</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>3.2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+
+                        <tr>
+                            <td>−2.3</td>
+                            <td>−3</td>
+                            <td>−2</td>
+                        </tr>
+
+                        <tr>
+                            <td>7.9</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="negative-number-box">
+
+            <h3>⚠ Important: Negative Numbers</h3>
+
+            <p>
+                The most common mistake is thinking that the floor of −2.3
+                is −2. That is incorrect.
+            </p>
+
+            <div class="formula">
+                ⌊−2.3⌋ = −3
+                <br><br>
+                ⌈−2.3⌉ = −2
+            </div>
+
+            <p>
+                Remember: floor means moving toward the smaller integer,
+                while ceiling means moving toward the larger integer.
+            </p>
+
+        </div>
+
+
+        <div class="card full-card">
+
+            <h3>Applications in Computer Science</h3>
+
+            <div class="application-grid">
+
+                <div>
+                    <strong>Pagination</strong>
+                    <p>
+                        Calculating how many pages are required for a given
+                        number of records.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>Memory Blocks</strong>
+                    <p>
+                        Determining the number of blocks required to store data.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>Grouping</strong>
+                    <p>
+                        Dividing objects into fixed-size groups.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>Binary Trees</strong>
+                    <p>
+                        Integer calculations involving levels and heights.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="example-box">
+
+                <h4>Example</h4>
+
+                <p>
+                    Suppose 53 students need to be divided into groups of
+                    10 students.
+                </p>
+
+                <div class="formula">
+                    ⌈53 / 10⌉ = ⌈5.3⌉ = 6
+                </div>
+
+                <p>
+                    Therefore, 6 groups are required.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FLOOR CEILING CALCULATOR -->
+        <div class="interactive-panel">
+
+            <div class="interactive-heading">
+
+                <div>
+                    <span class="eyebrow">INTERACTIVE CALCULATOR</span>
+                    <h3>Floor & Ceiling Calculator</h3>
+                </div>
+
+                <span class="tool-badge">Try Any Number</span>
+
+            </div>
+
+            <div class="calculator-row">
+
+                <input
+                    type="number"
+                    step="any"
+                    id="floorInput"
+                    value="-2.3"
+                    placeholder="Enter number"
+                >
+
+                <button class="btn btn-primary" id="calculateFloor">
+                    Calculate
+                </button>
+
+            </div>
+
+            <div id="floorResult" class="result-box"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     FUNCTION GRAPH / CONCEPT VISUAL
+========================================================== -->
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">VISUAL UNDERSTANDING</span>
+
+            <h2>Function Mapping Visualizer</h2>
+
+            <p>
+                A mapping diagram provides an easy way to understand how
+                elements of the domain are connected to elements of the
+                codomain.
+            </p>
+
+        </div>
+
+
+        <div class="mapping-simulator">
+
+            <div class="mapping-column">
+
+                <h3>Domain A</h3>
+
+                <div class="mapping-item" id="domainItem1">1</div>
+                <div class="mapping-item" id="domainItem2">2</div>
+                <div class="mapping-item" id="domainItem3">3</div>
+                <div class="mapping-item" id="domainItem4">4</div>
+
+            </div>
+
+
+            <div class="mapping-lines">
+
+                <div class="mapping-line">
+                    <span>→</span>
+                </div>
+
+                <div class="mapping-line">
+                    <span>→</span>
+                </div>
+
+                <div class="mapping-line">
+                    <span>→</span>
+                </div>
+
+                <div class="mapping-line">
+                    <span>→</span>
+                </div>
+
+            </div>
+
+
+            <div class="mapping-column">
+
+                <h3>Codomain B</h3>
+
+                <div class="mapping-item target">a</div>
+                <div class="mapping-item target">b</div>
+                <div class="mapping-item target">c</div>
+                <div class="mapping-item target">d</div>
+
+            </div>
+
+        </div>
+
+
+        <div class="mapping-explanation">
+
+            <strong>Function rule:</strong>
+
+            <span>
+                Every element in the domain must have exactly one outgoing arrow.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 11 : FLASHCARDS
+========================================================== -->
+<section class="section section-alt" id="flashcards">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">11 • ACTIVE RECALL</span>
+
+            <h2>Functions Flashcards</h2>
+
+            <p>
+                Use these flashcards for quick revision before class tests,
+                university examinations and 14-mark questions.
+            </p>
+
+        </div>
+
+
+        <div class="flashcard-toolbar">
+
+            <div>
+
+                <label for="flashcardCategory">
+                    Topic
+                </label>
+
+                <select id="flashcardCategory">
+
+                    <option value="all">All Topics</option>
+                    <option value="basics">Basics</option>
+                    <option value="domain">Domain & Range</option>
+                    <option value="types">Types</option>
+                    <option value="composition">Composition</option>
+                    <option value="inverse">Inverse</option>
+                    <option value="cs">CS Functions</option>
+                    <option value="floor">Floor & Ceiling</option>
+
+                </select>
+
+            </div>
+
+            <div class="flashcard-progress">
+                <strong id="flashcardCount">1 / 24</strong>
+                <span id="flashcardCategoryLabel">All Topics</span>
+            </div>
+
+        </div>
+
+
+        <div class="flashcard-wrapper">
+
+            <div
+                class="flashcard"
+                id="flashcard"
+                tabindex="0"
+                role="button"
+                aria-label="Flashcard. Press space to flip."
+            >
+
+                <div class="flashcard-inner">
+
+                    <div class="flashcard-face flashcard-front">
+
+                        <span class="card-side-label">
+                            QUESTION
+                        </span>
+
+                        <div id="flashcardQuestion">
+                            What is a function?
+                        </div>
+
+                        <small>
+                            Tap or press Space to reveal
+                        </small>
+
+                    </div>
+
+
+                    <div class="flashcard-face flashcard-back">
+
+                        <span class="card-side-label">
+                            ANSWER
+                        </span>
+
+                        <div id="flashcardAnswer">
+                            A relation where every input has exactly one output.
+                        </div>
+
+                        <small id="flashcardHint">
+                            Exam Hint
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="flashcard-controls">
+
+            <button class="btn btn-secondary" id="previousCard">
+                ← Previous
+            </button>
+
+            <button class="btn btn-primary" id="flipCard">
+                Flip Card
+            </button>
+
+            <button class="btn btn-secondary" id="nextCard">
+                Next →
+            </button>
+
+            <button class="btn btn-outline-dark" id="shuffleCards">
+                🔀 Shuffle
+            </button>
+
+        </div>
+
+
+        <div class="keyboard-hint">
+            Keyboard: <strong>Space</strong> = Flip |
+            <strong>←</strong> = Previous |
+            <strong>→</strong> = Next
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 12 : COMMON DOUBTS
+========================================================== -->
+<section class="section" id="doubts">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">12 • DOUBT CLEARING</span>
+
+            <h2>Common Student Doubts</h2>
+
+            <p>
+                These are common points where students make mistakes in
+                examinations.
+            </p>
+
+        </div>
+
+
+        <div class="accordion-container">
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>Is every relation a function?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        No. Every function is a relation, but every relation
+                        is not a function. A function requires every input to
+                        have exactly one output.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>What is the difference between codomain and range?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        The codomain is the specified target set, whereas the
+                        range contains only the values that are actually
+                        produced. Therefore Range is always a subset of the
+                        Codomain.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>Is every injective function surjective?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        No. An injective function can leave some codomain
+                        elements unused. It becomes bijective only when it is
+                        both injective and surjective.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>Is every surjective function injective?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        No. Different domain elements can map to the same
+                        codomain element in a surjective function.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>Why is f ∘ g usually different from g ∘ f?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        Composition depends on order. In f ∘ g, g is applied
+                        first and f is applied second. Reversing the order
+                        generally produces a different result.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>Does every function have an inverse?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        No. For an ordinary inverse function on the specified
+                        domain and codomain, the function needs to be
+                        bijective so that each output corresponds to exactly
+                        one input.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>Is f⁻¹(x) equal to 1/f(x)?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        No. f⁻¹(x) denotes the inverse function. 1/f(x) is
+                        the reciprocal of f(x). They are different concepts.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <button class="accordion-question">
+                    <span>Why is ⌊−2.3⌋ = −3?</span>
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+
+                    <p>
+                        Floor means the greatest integer less than or equal
+                        to the number. Among integers, −3 is less than −2.3,
+                        while −2 is greater than −2.3. Therefore
+                        ⌊−2.3⌋ = −3.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SECTION 13 : EXAM READY REVISION
+========================================================== -->
+<section class="section section-alt" id="revision">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">13 • EXAM PREPARATION</span>
+
+            <h2>14-Mark Answer Strategy</h2>
+
+            <p>
+                A good answer should not contain only a definition. Use a
+                structured explanation with notation, examples and suitable
+                diagrams.
+            </p>
+
+        </div>
+
+
+        <div class="answer-builder">
+
+            <div class="answer-step">
+
+                <span>01</span>
+
+                <div>
+                    <strong>Definition</strong>
+                    <p>Begin with a precise mathematical definition.</p>
+                </div>
+
+            </div>
+
+
+            <div class="answer-step">
+
+                <span>02</span>
+
+                <div>
+                    <strong>Notation</strong>
+                    <p>Write the relevant mathematical notation or formula.</p>
+                </div>
+
+            </div>
+
+
+            <div class="answer-step">
+
+                <span>03</span>
+
+                <div>
+                    <strong>Explanation</strong>
+                    <p>Explain the concept in simple paragraphs.</p>
+                </div>
+
+            </div>
+
+
+            <div class="answer-step">
+
+                <span>04</span>
+
+                <div>
+                    <strong>Example</strong>
+                    <p>Give at least one properly worked example.</p>
+                </div>
+
+            </div>
+
+
+            <div class="answer-step">
+
+                <span>05</span>
+
+                <div>
+                    <strong>Diagram / Table</strong>
+                    <p>Use a mapping diagram, table or suitable illustration.</p>
+                </div>
+
+            </div>
+
+
+            <div class="answer-step">
+
+                <span>06</span>
+
+                <div>
+                    <strong>Conclusion</strong>
+                    <p>Finish with the important observation or result.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="formula-wall">
+
+            <h3>Formula Revision Wall</h3>
+
+            <div class="formula-grid">
+
+                <div>
+                    <span>Function</span>
+                    <strong>f : A → B</strong>
+                </div>
+
+                <div>
+                    <span>Injective</span>
+                    <strong>f(a)=f(b) ⇒ a=b</strong>
+                </div>
+
+                <div>
+                    <span>Surjective</span>
+                    <strong>Range = Codomain</strong>
+                </div>
+
+                <div>
+                    <span>Bijective</span>
+                    <strong>Injective + Surjective</strong>
+                </div>
+
+                <div>
+                    <span>Composition</span>
+                    <strong>(f∘g)(x)=f(g(x))</strong>
+                </div>
+
+                <div>
+                    <span>Inverse</span>
+                    <strong>f(f⁻¹(x))=x</strong>
+                </div>
+
+                <div>
+                    <span>Exponential</span>
+                    <strong>f(x)=aˣ</strong>
+                </div>
+
+                <div>
+                    <span>Logarithm</span>
+                    <strong>log<sub>b</sub>x=y ⇔ bʸ=x</strong>
+                </div>
+
+                <div>
+                    <span>Floor</span>
+                    <strong>⌊x⌋ ≤ x</strong>
+                </div>
+
+                <div>
+                    <span>Ceiling</span>
+                    <strong>⌈x⌉ ≥ x</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question-bank">
+
+            <h3>Important Exam Questions</h3>
+
+            <ol>
+
+                <li>
+                    Define a function and explain domain, codomain and range
+                    with suitable examples.
+                </li>
+
+                <li>
+                    Explain injective, surjective and bijective functions with
+                    examples and mapping diagrams.
+                </li>
+
+                <li>
+                    Explain composition of functions and calculate
+                    f ∘ g and g ∘ f for suitable functions.
+                </li>
+
+                <li>
+                    Define inverse function and explain the procedure for
+                    finding the inverse of a function.
+                </li>
+
+                <li>
+                    Explain exponential and logarithmic functions and discuss
+                    their applications in Computer Science.
+                </li>
+
+                <li>
+                    Explain polynomial functions with examples and discuss
+                    their relevance to algorithm complexity.
+                </li>
+
+                <li>
+                    Define floor and ceiling functions. Explain their
+                    properties and applications with examples.
+                </li>
+
+            </ol>
+
+        </div>
+
+
+        <div class="final-checklist">
+
+            <h3>Before the Exam</h3>
+
+            <label>
+                <input type="checkbox">
+                I can define a function.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                I can distinguish domain, codomain and range.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                I can identify injective and surjective functions.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                I can explain bijective functions.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                I can calculate composition of functions.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                I can find an inverse function.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                I understand logarithmic and exponential functions.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                I can calculate floor and ceiling values, including negatives.
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="logo footer-logo">
+
+                <span class="logo-mark">ƒ</span>
+
+                <span>
+                    <strong>Discrete<span>Math</span></strong>
+                    <small>Functions Study Portal</small>
+                </span>
+
+            </div>
+
+            <p>
+                Student-friendly Discrete Mathematics notes designed for
+                BCA learners.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Topics</h4>
+
+            <a href="#basics">Functions</a>
+            <a href="#domain-range">Domain & Range</a>
+            <a href="#types">Function Types</a>
+            <a href="#composition">Composition</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Continue</h4>
+
+            <a href="#inverse">Inverse</a>
+            <a href="#cs-functions">CS Functions</a>
+            <a href="#flashcards">Flashcards</a>
+            <a href="#revision">Revision</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 Functions Study Portal • BCA Discrete Mathematics
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+<button
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Back to top"
+>
+    ↑
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
